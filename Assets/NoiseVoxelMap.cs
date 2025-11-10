@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class NoiseVoxelMap : MonoBehaviour
 {
-    public GameObject blockPrefab;
-    public GameObject GrassPrefab;
+    public GameObject TerraPrefab;
+    public GameObject ForestPrefab;
     public GameObject WaterPrefab;
 
     public int width = 20;
@@ -69,13 +69,13 @@ public class NoiseVoxelMap : MonoBehaviour
 
     private void Place(int x, int y, int z)
     {
-        var go = Instantiate(blockPrefab, new Vector3(x, y, z), Quaternion.identity, transform);
+        var go = Instantiate(TerraPrefab, new Vector3(x, y, z), Quaternion.identity, transform);
         go.name = $"B_{x}_{y}_{z}";
     }
 
     private void PlaceGrass(int x, int y, int z)
     {
-        var go = Instantiate(GrassPrefab, new Vector3(x, y, z), Quaternion.identity, transform);
+        var go = Instantiate(ForestPrefab, new Vector3(x, y, z), Quaternion.identity, transform);
         go.name = $"B_{x}_{y}_{z}";
     }
 
